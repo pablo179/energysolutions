@@ -7300,7 +7300,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-aside {
-	padding: 7px 0;
+	padding: 17px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8786,6 +8786,6 @@ html.rd-navbar-fixed-linked .page {
 	top: 24%;
 	left: 19.5%;
 }
-
-
-
+.unit.unit-spacing-xs *{
+	color:white !important ;
+}
