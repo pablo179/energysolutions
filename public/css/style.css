@@ -7325,8 +7325,9 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
 	width: auto;
 	height: auto;
-	max-width: 200px;
-	max-height: 200px;
+	margin: 0 0 0 10px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 10px;
 }
 
