@@ -13,6 +13,7 @@
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
+
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
@@ -46,7 +47,7 @@
                   <li>
                     <div class="unit unit-spacing-xs align-items-center">
                       <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
-                      <div class="unit-body"><a href="#">Avenida universidad col. Santiago Jaltepec #1099 </a></div>
+                      <div class="unit-body"><a href="#UBICACION">Avenida universidad col. Santiago Jaltepec #1099 </a></div>
                     </div>
                   </li>
                 </ul>
@@ -331,18 +332,9 @@
                 <li><a href="#">Contacto</a></li>
               </ul>
             </div>
-            <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
-              <P class="footer-classic-title">Correo</P>
-              <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <label class="form-label" for="subscribe-email">Email</label>
-                  <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
-                </div>
-                <div class="form-button group-sm text-center text-lg-left">
-                  <button class="button button-primary button-circle" type="submit">Enviar</button>
-                </div>
-              </form>
-              <p>Descripcion</p>
+            <div id="UBICACION" class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
+              <P class="footer-classic-title">Ubicación</P>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.580304560372!2d-98.71451235098606!3d20.109823779022822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA2JzM1LjUiTiA5OMKwNDInNTEuOSJX!5e0!3m2!1ses!2smx!4v1561686872355!5m2!1ses!2smx" width="100%" height="90%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -352,5 +344,20 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <!--coded by Drel-->
+      <!-- WhatsHelp.io widget -->
+      <script type="text/javascript">
+        (function () {
+            var options = {
+                facebook: "425528061364652", // Facebook page ID
+                call_to_action: "", // Call to action
+                position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+      </script>
+      <!-- /WhatsHelp.io widget -->
   </body>
 </html>
