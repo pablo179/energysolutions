@@ -4214,6 +4214,7 @@ textarea.form-input {
 	margin-top: 20px;
 }
 
+
 .heading-8 {
 	font-size: 14px;
 	font-weight: 700;
@@ -4624,6 +4625,7 @@ html.boxed body {
 
 .default-letter-spacing {
 	letter-spacing: 0.02em;
+	
 }
 
 .service-subtitle {
@@ -4899,6 +4901,7 @@ h3 + img {
 	padding: 25px 0;
 }
 
+
 .section-sm,
 .section-md,
 .section-lg,
@@ -5065,7 +5068,7 @@ html [class*='section-'].section-bottom-0 {
 .section-intro {
 	padding: 100px 0;
 	position: relative;
-	background-color: #505cfd;
+	background-color: #484950;
 }
 
 @media (min-width: 992px) {
@@ -5085,7 +5088,7 @@ html [class*='section-'].section-bottom-0 {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	opacity: .1;
+	opacity: .3;
 }
 
 .section-intro h1 {
@@ -7300,7 +7303,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-aside {
-	padding: 7px 0;
+	padding: 17px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8786,6 +8789,7 @@ html.rd-navbar-fixed-linked .page {
 	top: 24%;
 	left: 19.5%;
 }
-
-
+.unit.unit-spacing-xs *{
+	color:white !important ;
+}
 
