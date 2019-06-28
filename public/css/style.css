@@ -4625,6 +4625,7 @@ html.boxed body {
 
 .default-letter-spacing {
 	letter-spacing: 0.02em;
+	
 }
 
 .service-subtitle {
@@ -5067,7 +5068,7 @@ html [class*='section-'].section-bottom-0 {
 .section-intro {
 	padding: 100px 0;
 	position: relative;
-	background-color: #505cfd;
+	background-color: #484950;
 }
 
 @media (min-width: 992px) {
@@ -5087,7 +5088,7 @@ html [class*='section-'].section-bottom-0 {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	opacity: .1;
+	opacity: .3;
 }
 
 .section-intro h1 {
