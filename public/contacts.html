@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/scriptmail.js"></script>
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
@@ -52,7 +55,6 @@
                 </ul>
                 <ul class="social-links">
                   <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="https://www.facebook.com/Energy-Solutions-MenGar-425528061364652/"></a></li>
-                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
                 </ul>
               </div>
             </div>
@@ -106,35 +108,27 @@
             <h2 align="center">Envíanos un correo </h2>
             <div class="row justify-content-center">
               <div class="col-xl-6 col-md-8 col-12">
-                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <form class="rd-mailform text-left" action="bat/enviar.php" method="post">
                   <div class="form-wrap">
-                    <label class="form-label" for="contact-name">Nombre<span class="req-symbol">*</span></label>
-                    <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                  </div>
-                  <div class="form-wrap">
-                    <label class="form-label" for="contact-phone">Teléfono<span class="req-symbol">*</span></label>
-                    <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Required @PhoneNumber">
+                      <label>Nombre </label>
+                      <input class="form-input" type="text" name="nombre" required="required">
                   </div>
                   <div class="form-wrap">
-                    <label class="form-label" for="contact-email">E-Mail<span class="req-symbol">*</span></label>
-                    <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
+                      <label>Asunto</label>
+                      <input class="form-input" type="text"  name="asunto" required="required">
                   </div>
                   <div class="form-wrap">
-                    <label class="form-label label-textarea" for="contact-message">Mensaje<span class="req-symbol">*</span></label>
-                    <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                  </div>
-                  <!--Google captcha-->
-                  <div  class="form-wrap text-center form-validation-center">
-                    <div class="recaptcha" align="center" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
-                  </div>
+                      <label>Mensaje *</label>
+                      <textarea class="form-input" id="mensaje" name="mensaje" required="required"></textarea>
                   <div class="form-button group-sm text-center text-lg-center">
-                    <button class="button button-primary"  type="submit">Enviar</button>
+                      <input class="button button-primary" type="submit" value="Enviar correo"/>
                   </div>
-                </form>
+              </form>
               </div>
             </div>
           </div>
         </section>
+
 
      <section class="section">
         <div class="row justify-content-center">
@@ -186,5 +180,18 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+      (function () {
+          var options = {
+              facebook: "425528061364652", // Facebook page ID
+              call_to_action: "", // Call to action
+              position: "right", // Position may be 'right' or 'left'
+          };
+          var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+          s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+      })();
+    </script>
   </body>
 </html>
