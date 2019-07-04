@@ -53,96 +53,67 @@
       </div>
     </div>
     <div class="page">
-      <header class="section page-header">
-        <!--RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav
-            class="rd-navbar rd-navbar-classic"
-            data-layout="rd-navbar-fixed"
-            data-sm-layout="rd-navbar-fixed"
-            data-md-layout="rd-navbar-fixed"
-            data-md-device-layout="rd-navbar-fixed"
-            data-lg-layout="rd-navbar-static"
-            data-lg-device-layout="rd-navbar-static"
-            data-xl-layout="rd-navbar-static"
-            data-xl-device-layout="rd-navbar-static"
-            data-lg-stick-up-offset="46px"
-            data-xl-stick-up-offset="46px"
-            data-xxl-stick-up-offset="46px"
-            data-lg-stick-up="true"
-            data-xl-stick-up="true"
-            data-xxl-stick-up="true"
-          >
-            <div
-              class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
-              data-rd-navbar-toggle=".rd-navbar-collapse"
-            >
-              <span></span>
-            </div>
-            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
-              <div class="rd-navbar-aside">
-                <ul class="list-inline navbar-contact-list">
-                  <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"></div>
-                      <div class="unit-body">
-                        <a href="#">Sitio de administración</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!--RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!--RD Navbar Toggle-->
-                  <button
-                    class="rd-navbar-toggle"
-                    data-rd-navbar-toggle=".rd-navbar-nav-wrap"
-                  >
-                    <span></span>
-                  </button>
-                  <!--RD Navbar Brand-->
-                  <div class="rd-navbar-brand bg-gray-dark">
-                    <!--Brand--><a class="brand" href="index.html"
-                      ><img
-                        class="brand-logo-dark"
-                        src="images/logo-default-200x34.png"
-                        alt=""
-                        width="100"
-                        height="17"/><img
-                        class="brand-logo-light"
-                        src="images/logo-inverse-200x34.png"
-                        width="100"
-                        height="17"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
       <!--Base typography -->
       <section class="section section-lg bg-default">
         <div class="container">
-          <div class="row row-50 flex-lg-row-reverse">
+          <h4>Ingrese el nuevo servicio</h4>
+          <div class="row row-50">
             <div class="col-xl-4">
               <div class="rd-mailform text-left">
                 <div class="form-wrap">
-                  <label class="form-label" for="contact-name">Nombre<span class="req-symbol">*</span></label>
-                  <input class="form-input" id="contact-name" type="text">
+                  <p style="color: #212121">
+                    Nombre:
+                  </p>
+                  <input
+                    class="form-input"
+                    id="formname"
+                    type="text"
+                    style="color: white"
+                  />
+                </div>
+                <div class="form-wrap">
+                  <p style="color: #212121">
+                    URL de Imagen:
+                  </p>
+                  <input
+                    class="form-input"
+                    id="formimagen"
+                    type="text"
+                    style="color: white"
+                  />
+                </div>
+                <div class="form-wrap">
+                  <p style="color:#212121">Descripcion</p>
+                  <textarea
+                    class="form-input"
+                    id="formdescription"
+                    type="text"
+                    style="color: white"
+                  ></textarea>
+                </div>
+                <div class="form-wrap">
+                  <p style="color: #212121">tipo</p>
+                  <select id="formtype" style="color: white" class="form-input">
+                    <option value="renovable">Energia renovable</option>
+                    <option value="instalacion">Instalacion electrica</option>
+                  </select>
+                </div>
+                <div class="form-button group-sm text-center text-lg-center">
+                  <button id="formagregar" class="button button-primary">
+                    Agregar
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div class="row row-30 justify-content-center" id="altroot"></div>
     </div>
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script src="js/firebase2.js"></script>
   </body>
 </html>
