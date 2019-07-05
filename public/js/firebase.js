@@ -32,14 +32,14 @@ firebase
             <div class="pricing-box-inner">
               <img src="${e.imgurl}" alt="">
             </div>
-            <button class="button button-190 button-circle ${
+            <a href="contacts.html" class="button button-190 button-circle ${
               counting1 % 2 ? "btn-primary-rounded" : "btn-rounded-outline"
-            }">Ver más</button>
+            }">Ver más</a>
           </div>
         </div>`;
       } else if (e.type == "instalacion") {
         counting2++;
-        html1 += `
+        html2 += `
         <div class="col-xl-4 col-md-6 col-12 wow fadeInDown" data-wow-delay=".3s">
           <div class="pricing-box ${
             counting2 % 2 ? "bg-gray-dark " : "bg-gray-primary"
@@ -50,9 +50,9 @@ firebase
             <div class="pricing-box-inner">
               <img src="${e.imgurl}" alt="">
             </div>
-            <button class="button button-190 button-circle ${
+            <a href="contacts.html" class="button button-190 button-circle ${
               counting2 % 2 ? "btn-primary-rounded" : "btn-rounded-outline"
-            }">Ver más</button>
+            }">Ver más</a>
           </div>
         </div>`;
       }
@@ -90,24 +90,4 @@ document.getElementById("sec2").addEventListener("click", e => {
     left: 0,
     behavior: "smooth"
   });
-});
-
-document.getElementById("formagregar").addEventListener("click", () => {
-  console.log("tes");
-  firebase
-    .database()
-    .ref("services")
-    .push({
-      description: document.getElementById("formdescription").value,
-      imgurl: document.getElementById("formimagen").value,
-      nombre: document.getElementById("formname").value,
-      type: document.getElementById("formtype").value
-    })
-    .then(() => {
-      document.getElementById("formdescription").value = "";
-      document.getElementById("formimagen").value = "";
-      document.getElementById("formname").value = "";
-      document.getElementById("formtype").value = "";
-    })
-    .catch(e => console.log(e));
 });
